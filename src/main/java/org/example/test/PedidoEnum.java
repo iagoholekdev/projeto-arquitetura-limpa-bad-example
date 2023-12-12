@@ -1,4 +1,4 @@
-package org.example;
+package org.example.test;
 
 public enum PedidoEnum {
     CACHORRO_QUENTE("Cachorro quente"),

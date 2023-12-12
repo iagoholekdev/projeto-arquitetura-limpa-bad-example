@@ -1,4 +1,4 @@
-package org.example;
+package org.example.test;
 
 public class ResourceString {
     private static final String X_BURGUER =  "x-burguer";

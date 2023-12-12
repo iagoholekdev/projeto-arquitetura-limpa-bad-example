@@ -1,4 +1,4 @@
-package org.example;
+package org.example.test;
 
 public class PedidoDTO {
 
@@ -7,6 +7,10 @@ public class PedidoDTO {
 
     public void setTipoPedido(PedidoEnum pedidoEnum) {
         this.tipoPedido = pedidoEnum;
+    }
+
+    public PedidoEnum getTipoPedido() {
+       return this.tipoPedido;
     }
 
     public void setValor(double valor) {

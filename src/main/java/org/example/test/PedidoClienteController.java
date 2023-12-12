@@ -1,18 +1,17 @@
-package org.example;
+package org.example.test;
 
 import java.text.DecimalFormat;
 
 public class PedidoClienteController {
 
-
-    public void criarPedido(String tipoPedido) {
+    public void criarPedido(ClienteDTO clienteDTO, String tipoPedido) {
 
         PedidoDTO pedidoDTO = new PedidoDTO();
         pedidoDTO.setValor(generateRandomValue());
 
         Cliente cliente = new Cliente();
-        cliente.setId(1L);
-        cliente.setNome(cliente.getNome());
+        cliente.setId(clienteDTO.getId());
+        cliente.setNome(clienteDTO.getNome());
 
         Pedido pedido = new Pedido();
         if (ResourceString.getXBurguerConst().equalsIgnoreCase(tipoPedido)) {
@@ -23,6 +22,7 @@ public class PedidoClienteController {
             System.out.println("Pedido inválido. Tente novamente.");
         }
         pedido.setValor(CriarPedidoUseCase.generateRandomValue());
+        pedido.setTipoPedido(pedidoDTO.getTipoPedido());
 
         PedidoCliente pedidoCliente = new PedidoCliente();
         pedidoCliente.setPedido(pedido);
